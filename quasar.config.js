@@ -12,7 +12,7 @@
 const { configure } = require('quasar/wrappers');
 const path = require('path');
 
-module.exports = configure(function (/* ctx */) {
+module.exports = configure(function (ctx) {
   return {
     eslint: {
       // fix: true,
@@ -69,7 +69,11 @@ module.exports = configure(function (/* ctx */) {
 
       // publicPath: '/',
       // analyze: true,
-      // env: {},
+        env: {
+            API: ctx.dev
+                ? 'http://localhost:8000'
+                : 'http://localhost:8000'
+        },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
@@ -97,7 +101,14 @@ module.exports = configure(function (/* ctx */) {
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
       // https: true
-      open: true // opens browser window automatically
+      // open: true // opens browser window automatically
+        proxy: {
+            '/api': {
+                target: 'http://127.0.0.1:8000',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/api/, '')
+            },
+        },
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework

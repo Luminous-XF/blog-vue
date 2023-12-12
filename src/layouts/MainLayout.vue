@@ -8,7 +8,7 @@
             </q-list>
 
             <q-list class="row header-bar-list">
-                <q-item clickable v-ripple>
+                <q-item clickable v-ripple to="/home">
                     <q-item-section avatar>
                         <q-avatar square size="md">
                             <img src="../assets/image/icon/Home.svg" alt="">
@@ -48,7 +48,7 @@
                     <q-item-section>留言</q-item-section>
                 </q-item>
 
-                <q-item clickable v-ripple>
+                <q-item clickable v-ripple to="/about">
                     <q-item-section avatar>
                         <q-avatar square size="md">
                             <img src="../assets/image/icon/Fish.svg" alt="">
@@ -70,24 +70,13 @@
 
         <q-img class="background-image" src="public/image/background/background-001.jpg"></q-img>
 
-        <q-page-container>
+        <q-page-container class="main-content">
             <router-view/>
         </q-page-container>
     </q-layout>
 </template>
 
 <script lang="ts" setup>
-import {onMounted} from 'vue'
-
-onMounted(() => {
-    resetMainContentTopValue();
-});
-
-function resetMainContentTopValue() {
-    const homeFirstBackgroundImage = <HTMLElement>document.getElementsByClassName('background-image')[0];
-    const mainContent = <HTMLElement>document.getElementsByClassName('main-content')[0];
-    mainContent.style.top = homeFirstBackgroundImage.offsetHeight + 'px';
-}
 
 </script>
 
@@ -125,5 +114,14 @@ function resetMainContentTopValue() {
     height: 100%;
     object-fit: cover;
     z-index: 0;
+}
+
+.main-content {
+    width: 100%;
+    min-height: 1200px;
+    position: absolute;
+    background-color: rgba(203, 208, 234, 0%);
+    margin-top: 0;
+    z-index: 100;
 }
 </style>
