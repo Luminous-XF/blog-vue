@@ -10,7 +10,6 @@
 import {onMounted} from 'vue';
 
 const resetMainContentTopValue = () => {
-    const homeFirstBackgroundImage = <HTMLElement>document.getElementsByClassName('background-image')[0];
     const mainContent = <HTMLElement>document.getElementsByClassName('main-content')[0];
     mainContent.style.top = '0px';
 }
