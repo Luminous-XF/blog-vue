@@ -1,7 +1,40 @@
 <template>
     <div class="container">
-        <div style="width: 100%; height: 1000px; background: #21BA45">
+        <div class="row justify-around">
+            <div class="col-8">
+                <q-card class="title-card">
+                    <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" style="height: 100%;">
+                        <div class="text-h5 absolute-bottom text-right">
+                            算法
+                        </div>
+                    </q-img>
+                </q-card>
 
+                <q-card class="title-card">
+                    <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" style="height: 100%;">
+                        <div class="text-h5 absolute-bottom text-right">
+                            数据结构
+                        </div>
+                    </q-img>
+                </q-card>
+
+                <q-card class="title-card">
+                    <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" style="height: 100%;">
+                        <div class="text-h5 absolute-bottom text-right">
+                            Python
+                        </div>
+                    </q-img>
+                </q-card>
+
+
+                <q-card class="title-card">
+                    <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" style="height: 100%;">
+                        <div class="text-h5 absolute-bottom text-right">
+                            读书笔记
+                        </div>
+                    </q-img>
+                </q-card>
+            </div>
         </div>
     </div>
 </template>
@@ -17,15 +50,33 @@ const resetMainContentTopValue = () => {
 onMounted(() => {
     resetMainContentTopValue();
 });
-
 </script>
 
 <style scoped>
 .container {
     width: 60%;
-    margin-top: 60px;
+    margin-top: 64px;
     margin-left: 20%;
     margin-right: 20%;
     z-index: 200;
+}
+
+.title-card {
+    height: 380px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.left-category-card {
+    font-size: 22px;
+    background: blue;
+    margin-bottom: 30px;
+    height: 150px;
+    width: 100%;
+    caret-color: transparent;
+}
+
+.left-category-card:hover {
+
 }
 </style>

@@ -30,16 +30,6 @@
 
                 <q-item clickable v-ripple>
                     <q-item-section avatar>
-                        <q-avatar size="md">
-                            <img src="../assets/image/icon/PriceTag.svg" alt="">
-                        </q-avatar>
-                    </q-item-section>
-
-                    <q-item-section class="navigation-bar">标签</q-item-section>
-                </q-item>
-
-                <q-item clickable v-ripple>
-                    <q-item-section avatar>
                         <q-avatar square size="md">
                             <img src="../assets/image/icon/Message.svg" alt="">
                         </q-avatar>
@@ -119,6 +109,7 @@
 
 .main-content {
     width: 100%;
+    //background: white;
     min-height: 1200px;
     position: absolute;
     margin-top: 0;

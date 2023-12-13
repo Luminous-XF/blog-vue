@@ -432,7 +432,7 @@ onMounted(() => {
 
 .main-content-post-card {
     width: 100%;
-    height: 280px;
+    height: 300px;
     border-radius: 18px;
     margin-bottom: 22px;
     caret-color: transparent;
