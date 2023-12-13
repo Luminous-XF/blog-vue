@@ -15,17 +15,17 @@
                         </q-avatar>
                     </q-item-section>
 
-                    <q-item-section>首页</q-item-section>
+                    <q-item-section class="navigation-bar">首页</q-item-section>
                 </q-item>
 
-                <q-item clickable v-ripple>
+                <q-item clickable v-ripple to="/categories">
                     <q-item-section avatar>
                         <q-avatar square size="md">
                             <img src="../assets/image/icon/Folder.svg" alt="">
                         </q-avatar>
                     </q-item-section>
 
-                    <q-item-section>分类</q-item-section>
+                    <q-item-section class="navigation-bar">分类</q-item-section>
                 </q-item>
 
                 <q-item clickable v-ripple>
@@ -35,7 +35,7 @@
                         </q-avatar>
                     </q-item-section>
 
-                    <q-item-section>标签</q-item-section>
+                    <q-item-section class="navigation-bar">标签</q-item-section>
                 </q-item>
 
                 <q-item clickable v-ripple>
@@ -45,7 +45,7 @@
                         </q-avatar>
                     </q-item-section>
 
-                    <q-item-section>留言</q-item-section>
+                    <q-item-section class="navigation-bar">留言</q-item-section>
                 </q-item>
 
                 <q-item clickable v-ripple to="/about">
@@ -55,7 +55,7 @@
                         </q-avatar>
                     </q-item-section>
 
-                    <q-item-section>关于</q-item-section>
+                    <q-item-section class="navigation-bar">关于</q-item-section>
                 </q-item>
 
                 <q-item clickable v-ripple>
@@ -102,6 +102,7 @@
 
 .header-title {
     font-size: 28px;
+    font-weight: bold;
     color: aliceblue;
     font-family: "Open Sans", sans-serif;
 }
@@ -120,8 +121,12 @@
     width: 100%;
     min-height: 1200px;
     position: absolute;
-    background-color: rgba(203, 208, 234, 0%);
     margin-top: 0;
     z-index: 100;
+}
+
+.navigation-bar {
+    font-weight: bold;
+    color: white;
 }
 </style>

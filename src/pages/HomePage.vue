@@ -42,7 +42,7 @@
 
             <div class="col-8">
                 <q-list>
-                    <q-item>
+                    <q-item class="xxx">
                         <q-card class="main-content-post-card">
                             <q-card-section horizontal style="height: 80%">
                                 <q-card-section class="overflow-hidden">
