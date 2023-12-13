@@ -66,17 +66,4 @@ onMounted(() => {
     border-radius: 12px;
     margin-bottom: 30px;
 }
-
-.left-category-card {
-    font-size: 22px;
-    background: blue;
-    margin-bottom: 30px;
-    height: 150px;
-    width: 100%;
-    caret-color: transparent;
-}
-
-.left-category-card:hover {
-
-}
 </style>
